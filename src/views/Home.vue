@@ -11,30 +11,28 @@
         </p>
         <a href="/#/home" class="cta-button">See more</a>
       </div>
-      <div class="linear-gradient"></div>
       <img
         src="../assets/landing-page-bg.jpg"
         alt="Landing page background image"
         class="bg-image"
       />
-      <lottie-animation
-        class="scroll-btn"
-        path="../assets/scroll-button.json"
-        :height="50"
-        :width="50"
-        :autoPlay="true"
-      />
+
+      <div class="linear-gradient"></div>
     </div>
   </div>
 </template>
 
 <script>
-  import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue";
+  import gsap from "gsap";
   export default {
-    components: {
-      LottieAnimation,
-    },
+    components: {},
     data: () => ({}),
+    methods: {
+      animText: function(e) {
+        console.log(e);
+        gsap.to(".title", { rotation: 27, x: 100, duration: 1 });
+      },
+    },
   };
 </script>
 
@@ -47,7 +45,6 @@
     background: #333333;
   }
   .container {
-    margin-top: 15px;
     display: flex;
     justify-content: center;
   }

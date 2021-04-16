@@ -1,13 +1,13 @@
 <template>
   <div class="nav">
-    <div class="nav-container">
+    <nav class="nav-container">
       <a href="/home" class="logo"></a>
       <ul>
         <li><router-link to="/home">Home</router-link></li>
         <li><router-link to="/collection">Collection</router-link></li>
         <li><router-link to="/gallery">Gallery</router-link></li>
       </ul>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -27,6 +27,7 @@
   .nav {
     display: flex;
     justify-content: center;
+    margin-bottom: 35px;
   }
 
   .nav-container {
