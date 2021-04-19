@@ -1,8 +1,8 @@
 <template>
   <div class="nav">
     <nav class="nav-container">
-      <a href="/home" class="logo"></a>
-      <ul>
+      <a href="/#/home" class="logo"></a>
+      <ul id="nav" v-on:click="activeNav">
         <li><router-link to="/home">Home</router-link></li>
         <li><router-link to="/collection">Collection</router-link></li>
         <li><router-link to="/gallery">Gallery</router-link></li>
@@ -12,10 +12,18 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+    
+  }
 </script>
 
 <style lang="scss" scoped>
+  @import "../styles/variables.scss";
+
+  .router-link-active {
+    color: #2ca58d;
+  }
+
   .logo {
     display: block;
     width: 51px;
@@ -28,13 +36,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 35px;
+    margin-top: 15px;
   }
 
   .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1100px;
+    width: $main-width;
   }
   ul {
     margin: 0 0;
@@ -46,7 +55,7 @@
       a {
         text-decoration: none;
         color: #333333;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
         &:hover {
           color: #90cbb8;
         }

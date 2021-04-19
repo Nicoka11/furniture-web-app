@@ -1,8 +1,8 @@
 <template>
   <NavBar />
-  <transition>
+  <div class="wrap-center">
     <router-view></router-view>
-  </transition>
+    </div>
 </template>
 
 <script>
@@ -17,6 +17,10 @@
 </script>
 
 <style>
+  .wrap-center {
+    width: 100vw;
+    text-align: center;
+  }
   /* Box sizing rules */
   *,
   *::before,
